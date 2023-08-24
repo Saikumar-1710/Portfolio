@@ -270,8 +270,9 @@ nav ul li a:hover::after{
 }
 .gallery div img{
     width: 100%;
-    filter: grayscale(75%);
-    transition: transform 0.5s;
+    filter: grayscale(0%);
+    border-radius: 5px;
+    transition: transform 1.5s;
 }
 .gallery::-webkit-scrollbar{
     display: none;
@@ -282,9 +283,7 @@ nav ul li a:hover::after{
     justify-content: center;
     margin: 10% auto;
 }
-.gallery-wrap #backBtn, #nextBtn{
-    border-radius: 30px;
-}
+
 #backBtn, #nextBtn{
     width: 50px;
     cursor: pointer;
