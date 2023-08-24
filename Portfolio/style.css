@@ -1,3 +1,4 @@
+/* github */
 *{
     margin: 0;
     padding: 0;
@@ -251,6 +252,49 @@ nav ul li a:hover::after{
 }
 .btn:hover{
     background: #ff004f;
+}
+
+/*-----------------photo gallery--------------*/
+.gallery{
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+.gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+.gallery div img{
+    width: 100%;
+    filter: grayscale(75%);
+    transition: transform 0.5s;
+}
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+.gallery-wrap #backBtn, #nextBtn{
+    border-radius: 30px;
+}
+#backBtn, #nextBtn{
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+    border-radius: 80px;;
+}
+.gallery div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /* ---------------contact------------------*/
