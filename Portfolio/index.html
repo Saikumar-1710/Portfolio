@@ -1,3 +1,4 @@
+<!--github-->
 <!Doctype html>
 
 <html lang="en">
@@ -156,6 +157,33 @@
     </div>
 </div>
 
+<!-- -------------------------------Photo Gallery ------------------------->
+<div id="Photo Gallery">
+    <div class="container">
+        <hi class="sub-title">Photo Gallery</hi>
+    <div class="gallery-wrap">
+        
+        <img src="images/backbtn.jpg" id="backBtn">
+        <div class="gallery">
+            <div>
+                <span><img src="images/background.jpeg"></span>
+                <span><img src="images/background2.jpeg"></span>
+                <span><img src="images/background4.jpeg"></span>
+            </div>
+            <div>   
+                <span><img src="images/background5.jpeg"></span>
+                <span><img src="images/work1.jpeg"></span>
+                <span><img src="images/work2.jpeg"></span>
+            </div>
+            <div>
+                <span><img src="images/work3.jpeg"></span>
+            </div>
+        </div>
+        <img src="images/nextbtn.jpg" id="nextBtn">
+    </div>
+    </div>
+    </div>    
+
 <!-- ---------------------------------contact----------------->
 <div id="contact">
 <div class="container">
@@ -231,6 +259,29 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+
+<!-- script for photo gallery-->
+<script>
+    let scrollContainer = document.querySelector(".gallery");
+    let backBtn = document.getElementById("backBtn");
+    let nextBtn = document.getElementById("nextBtn");
+    scrollContainer.addEventListener("wheel", (evt) =>{
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+        scrollContainer.style.scrollBehavior += "auto";
+    });
+
+    nextBtn.addEventListener("click", ()=>{
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft += 900;
+    });
+
+    backBtn.addEventListener("click", ()=>{
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft -= 900;
+    });
+  </script>
+    
 </body>
 </head>
 </html>
