@@ -256,7 +256,7 @@ nav ul li a:hover::after{
 
 /*-----------------photo gallery--------------*/
 .gallery{
-    width: 900px;
+    width: 100%;
     display: flex;
     overflow-x: scroll;
 }
@@ -426,6 +426,46 @@ nav .fa-solid{
     .copyright{
         font-size: 14px;
     }
+    .gallery{
+        width: 100%;
+        display: flex;
+        overflow-x: scroll;
+    }
+    .gallery div{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        padding: 5px;
+        flex: none;
+    }
+    .gallery div img{
+        width: 100%;
+        filter: grayscale(0%);
+        border-radius: 5px;
+        transition: transform 1.5s;
+    }
+    .gallery::-webkit-scrollbar{
+        display: none;
+    }
+    .gallery-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10% auto;
+    }
+    #backBtn, #nextBtn{
+        width: 10px;
+        cursor: pointer;
+        margin: 20px;
+        border-radius: 20px;
+    }
+    .gallery div img:hover{
+        filter: grayscale(0);
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    
 }
 
 #msg{
